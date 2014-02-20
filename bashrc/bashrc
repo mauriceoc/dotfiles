@@ -15,9 +15,7 @@ alias h='history'
 alias v='/bin/vim'
 alias vp='if [ -e pom.xml ]; then vim pom.xml; else echo "No pom in pwd"; fi'
 alias s='/bin/clear'
-alias repos='cd /c/projects/tor/repos'
 alias apps="cd /c/apps"
-#alias cd='pushd ./; cd'
 
 # pwd
 alias p='/bin/pwd'
@@ -62,13 +60,3 @@ alias mcp='mvnrun clean package'
 alias mci='mvnrun clean install'
 alias mce='mvnrun compile exec:java'
 alias mitjr='mvnrun verify -Pjboss_remote'
-alias kill_m2_repo='rm -Rf /c/Users/emauoco/.m2/repository/*'
-
-
-# Backup
-alias bakup_gitbash='cp ~/.gitconfig ~/.bashrc ~/Dropbox/Config/gitbash/'
-
-alias list_versant="db2tty -d dps_integration | grep instances | grep MeContext"
-
-# Jboss
-alias jboss="/c/apps/exec/exec.sh"

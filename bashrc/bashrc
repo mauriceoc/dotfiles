@@ -1,13 +1,34 @@
 #!/bin/bash
 
-# For Maven
-mvnrun () {
-  echo mvn $@
-  eval mvn $@
-  echo mvn $@
+# Parse git branch
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+echoRun () {
+  echo $@
+  eval $@
+  echo $@
+}
+
+# Set JDK via JAVA_HOME
+function setjdk() {  
+	if [ $# -ne 0 ]; then  
+		removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'  
+		if [ -n "${JAVA_HOME+x}" ]; then  
+			removeFromPath $JAVA_HOME  
+		fi  
+		export JAVA_HOME=`/usr/libexec/java_home -v $@`  
+		export PATH=$JAVA_HOME/bin:$PATH  
+	fi  
+}  
+
+function removeFromPath() {  
+	export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")  
 }
 
 # General
+alias clp='pbcopy <'
 alias c='/bin/clear'
 alias clea='/bin/clear'
 alias cl='/bin/clear'
@@ -16,8 +37,6 @@ alias v='/bin/vim'
 alias vp='if [ -e pom.xml ]; then vim pom.xml; else echo "No pom in pwd"; fi'
 alias s='/bin/clear'
 alias apps="cd /c/apps"
-
-# pwd
 alias p='/bin/pwd'
 alias pw='/bin/pwd'
 alias wpd='/bin/pwd'
@@ -43,20 +62,13 @@ alias gg='git grep'
 alias gl='git ls-files'
 alias gls='git ls-files'
 
-# Find
-alias src='/bin/find ./ -type d -name src'
-alias pom='/bin/find ./ -type f -name pom.xml'
-alias jav='/bin/find ./ -type f -name *.java'
-alias js='/bin/find ./ -type f -name *.js'
-alias xml='/bin/find ./ -type f -name *.xml'
+# Prompt stuff
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$(parse_git_branch) "
+export CLICOLOR=1
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
 
-# Maven
-alias mcc='mvnrun clean compile'
-alias mcct='mvnrun clean compile test'
-alias mctc='mvnrun clean test compile'
-alias mct='mvnrun clean test'
-alias mt='mvnrun test'
-alias mcp='mvnrun clean package'
-alias mci='mvnrun clean install'
-alias mce='mvnrun compile exec:java'
-alias mitjr='mvnrun verify -Pjboss_remote'
+# LS colours
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+setjdk 1.7

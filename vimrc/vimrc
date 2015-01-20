@@ -12,12 +12,10 @@ filetype indent on
 
 set so=7            " start vertical scroll from 7 lines
 
-silent! colorscheme badwolf
-
-"try
-"    colorscheme desert
-"catch
-"endtry
+try
+    colorscheme darkblue
+catch
+endtry
 
 set background=dark
 set autochdir 		" change directory to the current buffer when opening files.

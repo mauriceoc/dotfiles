@@ -56,13 +56,14 @@ set si                  " smart indent
 "set wrap               " wrap lines
 set viminfo^=%          " remember info about open buffers on close
 
+set pastetoggle=<F10> " stop the crazy indent on paste
+
 au BufNewFile,BufRead *.gradle setf groovy
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> }
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+
 " to exit insert mode
 inoremap § <esc>
 
@@ -78,8 +79,25 @@ noremap <Right> <NOP>
 noremap h <NOP>
 noremap l <NOP>
 
+" disable search with esc esc
+nnoremap <silent> <Esc><Esc> :noh<CR> :call clearmatches()<CR>
+
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
+" sort out pasting from GUI
+" esp. indenting 
+"
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+          set pastetoggle=<Esc>[201~
+            set paste
+              return ""
+      endfunction

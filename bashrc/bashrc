@@ -1,15 +1,36 @@
 #!/bin/bash
 
-# Parse git branch
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 echoRun () {
   echo $@
   eval $@
   echo $@
 }
+
+# For Grails
+grailsRun() {
+  echoRun grails $@
+}
+
+grailsDebug() {
+  echoRun grails-debug $@
+}
+
+# Parse git branch
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Prompt stuff
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$(parse_git_branch) "
+export CLICOLOR=1
+
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
+# LS colours
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # Set JDK via JAVA_HOME
 function setjdk() {  
@@ -27,48 +48,59 @@ function removeFromPath() {
 	export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")  
 }
 
-# General
-alias clp='pbcopy <'
-alias c='/bin/clear'
-alias clea='/bin/clear'
-alias cl='/bin/clear'
+function chrome () {
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
+}
+
+# Add stuff to path
+
+export PATH="$GRADLE_HOME/bin:$PATH:~/bin:/Applications/Julia-0.3.2.app/Contents/Resources/julia/bin:/Users/mauriceoconnor/.rbenv/versions/2.1.4/bin:$TIZEN_SDK_PATH/tools/ide/bin"
+
+# Aliases
+
+alias scr='screen -Dr'
+alias ls='ls -GFh'
+alias sl='ls'
+alias c='echo use ctrl+l'
+alias clea='clear'
+alias l='ls -lh'
+alias la='ls -lah'
+alias v='vim'
+alias vbrc='vim ~/.bashrc'
 alias h='history'
-alias v='/bin/vim'
-alias vp='if [ -e pom.xml ]; then vim pom.xml; else echo "No pom in pwd"; fi'
-alias s='/bin/clear'
-alias apps="cd /c/apps"
-alias p='/bin/pwd'
-alias pw='/bin/pwd'
-alias wpd='/bin/pwd'
-alias dpw='/bin/pwd'
+alias startpg='postgres -D /usr/local/var/postgres/'
+alias clp='pbcopy <'
+alias ..='cd ..'
+alias ...='cd ../..'
 
-# grep
-alias grs='/bin/grep -l -r'
+alias chromex="chrome --args --disable-web-security"
 
-# push
-alias pd='pushd ./'
-alias dp='popd'
+alias d='docker'
 
-# ls
-alias l='/bin/ls -lah'
-alias sl='/bin/ls -lah'
-alias ll='/bin/ls -lah'
-alias la='/bin/ls -lah'
+# Grails aliases
+alias gra='grails run-app'
 
 # git
-alias g='/bin/git'
+alias g='git'
+alias gf='git-flow'
 alias gs='git status --short'
 alias gg='git grep'
 alias gl='git ls-files'
 alias gls='git ls-files'
 
-# Prompt stuff
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$(parse_git_branch) "
-export CLICOLOR=1
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
+alias xamppfiles='cd /Applications/XAMPP/xamppfiles'
 
-# LS colours
-export LSCOLORS=ExFxBxDxCxegedabagacad
+alias pd='pushd ./'
+alias mongo-start='mongod --config /usr/local/etc/mongod.conf'
+
+alias tinyproxy-log='tail -f -n0  /usr/local/Cellar/tinyproxy/1.8.3/var/log/tinyproxy/tinyproxy.log'
+
+alias psql='pgcli'
+
+alias showHidden='defaults write com.apple.finder AppleShowAllFiles YES'
 
 setjdk 1.7
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh" ]] && source "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh"
+

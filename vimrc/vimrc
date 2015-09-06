@@ -1,13 +1,46 @@
 silent! execute pathogen#infect() " for Pathogen
 
+let mapleader=","
+
+" Forget being compatible with good ol' vi
+set nocompatible
+
+" Get that filetype stuff happening
+filetype on
+filetype plugin on
+filetype indent on
+
+" Turn on that syntax highlighting
 syntax on
+
+" Why is this not a default
+set hidden
+
+" Don't update the display while executing macros
+set lazyredraw
+
+" At least let yourself know what mode you're in
+set showmode
+
+" Enable enhanced command-line completion. Presumes you have compiled
+" with +wildmenu. See :help 'wildmenu'
+set wildmenu
+set wildmode=longest:list,full
+
+" Let's make it easy to edit this file (mnemonic for the key sequence is
+" 'e'dit 'v'imrc)
+nmap <silent> ,ev :e $MYVIMRC<cr>
+
+" And to source this file as well (mnemonic for the key sequence is
+" 's'ource 'v'imrc)
+nmap <silent> ,sv :so $MYVIMRC<cr>
 
 let g:netrw_liststyle = 3 " netrw browser settings
 let g:netrw_altv = 1
 let g:netrw_banner = 0
 
-filetype plugin on
-filetype indent on
+set exrc " project specific .vimrc files
+set secure
 
 set so=7                " start vertical scroll from 7 lines
 
@@ -19,14 +52,11 @@ endtry
 set background=dark
 set autochdir 		    " change directory to the current buffer when opening files.
 "set cursorline		    " display a line under the cursor 
-set wildmenu
-set wildmode=full
-set lazyredraw
-set nocompatible
+
 set nu                  " line numbers
 set clipboard=unnamed
 set ruler               " show the cursor position all the time
-"set laststatus=2 	    " always show the status line
+set laststatus=2 	    " always show the status line
 set statusline=%f       " Path to the file
 set statusline+=%=      " Switch to the right side
 set statusline+=%l      " Current line

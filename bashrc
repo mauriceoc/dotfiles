@@ -32,53 +32,31 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
-# Set JDK via JAVA_HOME
-function setjdk() {  
-	if [ $# -ne 0 ]; then  
-		removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'  
-		if [ -n "${JAVA_HOME+x}" ]; then  
-			removeFromPath $JAVA_HOME  
-		fi  
-		export JAVA_HOME=`/usr/libexec/java_home -v $@`  
-		export PATH=$JAVA_HOME/bin:$PATH  
-	fi  
-}  
-
-function removeFromPath() {  
-	export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")  
-}
-
 function chrome () {
   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
 }
 
-# Add stuff to path
-
-export PATH="$GRADLE_HOME/bin:$PATH:~/bin:/Applications/Julia-0.3.2.app/Contents/Resources/julia/bin:/Users/mauriceoconnor/.rbenv/versions/2.1.4/bin:$TIZEN_SDK_PATH/tools/ide/bin"
-
 # Aliases
 
-alias scr='screen -Dr'
+alias c='echo use ctrl+l'
+alias clear='echo use ctrl+l'
+
+alias l='ls -lh'
 alias ls='ls -GFh'
 alias sl='ls'
-alias c='echo use ctrl+l'
-alias clea='clear'
-alias l='ls -lh'
 alias la='ls -lah'
+
 alias v='vim'
-alias vbrc='vim ~/.bashrc'
 alias h='history'
+
 alias startpg='postgres -D /usr/local/var/postgres/'
-alias clp='pbcopy <'
+
 alias ..='cd ..'
 alias ...='cd ../..'
 
 alias chromex="chrome --args --disable-web-security"
 
 alias d='docker'
-
-# Grails aliases
-alias gra='grails run-app'
 
 # git
 alias g='git'
@@ -98,8 +76,6 @@ alias tinyproxy-log='tail -f -n0  /usr/local/Cellar/tinyproxy/1.8.3/var/log/tiny
 alias psql='pgcli'
 
 alias showHidden='defaults write com.apple.finder AppleShowAllFiles YES'
-
-setjdk 1.7
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh" ]] && source "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh"

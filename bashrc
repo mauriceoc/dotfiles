@@ -38,7 +38,6 @@ function chrome () {
 }
 
 # Aliases
-
 alias c='echo use ctrl+l'
 alias clear='echo use ctrl+l'
 

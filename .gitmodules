@@ -1,21 +1,21 @@
-[submodule "bundle/badwolf"]
+[submodule "vim/bundle/badwolf"]
 	path = vim/bundle/badwolf
 	url = https://github.com/sjl/badwolf.git
-[submodule "bundle/ctrlp.vim"]
+[submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "bundle/vim-rooter"]
+[submodule "vim/bundle/vim-rooter"]
 	path = vim/bundle/vim-rooter
 	url = https://github.com/airblade/vim-rooter.git
-[submodule "bundle/vim-vinegar"]
+[submodule "vim/bundle/vim-vinegar"]
 	path = vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
-[submodule "bundle/vim-fugitive"]
+[submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/emmet-vim"]
+[submodule "vim/bundle/emmet-vim"]
 	path = vim/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
-[submodule "bundle/indentLine"]
+[submodule "vim/bundle/indentLine"]
 	path = vim/bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine.git

@@ -66,11 +66,6 @@ grailsDebug() {
   echoRun grails -debug $@
 }
 
-# Git prompt 
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 # Prompt stuff
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$(__git_ps1) "
 export CLICOLOR=1
@@ -89,7 +84,7 @@ function chrome () {
 }
 
 # ls
-alias l='clear; pwd; ls -oh'
+alias l="clear; pwd; ls -oh"
 alias sl='ls'
 alias la='ls -a'
 

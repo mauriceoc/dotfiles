@@ -39,6 +39,10 @@ grailsDebug() {
   echoRun grails -debug $@
 }
 
+colorPwd() {
+    withColor $GREEN pwd 
+}
+
 # Prompt stuff
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$(__git_ps1) "
 export CLICOLOR=1
@@ -57,7 +61,7 @@ function chrome () {
 }
 
 # ls
-alias l="{ clear && withColor $GREEN pwd -L && ls -oh && echo; }"
+alias l="{ clear && colorPwd && ls -oh && echo; }"
 alias sl='ls'
 alias la='ls -a'
 
@@ -69,7 +73,7 @@ alias pd='pushd ./'
 
 # cd
 alias ..='cd ..'
-alias ...='cd ../..'
+alias ...='cd ../...'
 
 # docker
 alias d='docker'

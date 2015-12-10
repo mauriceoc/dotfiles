@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # colours
+
 BLACK=$(tput setaf 0)
 RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
@@ -16,6 +17,12 @@ NORMAL=$(tput sgr0)
 BLINK=$(tput blink)
 REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
+
+function withColor () { 
+    COLOR=$1
+    CMD=${@:2}
+    echo -e $COLOR; $CMD; echo -e $NORMAL
+}
 
 # echo stuff
 echoRun () {
@@ -51,7 +58,7 @@ function chrome () {
 }
 
 # ls
-alias l="clear; echo -e $GREEN; pwd; echo -e $NORMAL; ls -oh"
+alias l="{ clear && withColor $GREEN pwd -L && ls -oh && echo; }"
 alias sl='ls'
 alias la='ls -a'
 

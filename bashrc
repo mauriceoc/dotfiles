@@ -18,7 +18,7 @@ BLINK=$(tput blink)
 REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
 
-function withColor () { 
+withColor () { 
     COLOR=$1
     CMD=${@:2}
     echo -e $COLOR; $CMD; echo -e $NORMAL

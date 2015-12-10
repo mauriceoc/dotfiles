@@ -1,0 +1,23 @@
+[core]
+	excludesfile = /Users/mauriceoconnor/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	cho = checkout
+	s = status
+	reshh = reset --hard HEAD
+	l = log -n5
+	lol = log --oneline
+	ls = ls-files
+	a = add -A
+	ca = commit -a 
+    cam = commit -a --amend
+[user]
+	name = 
+	email = maurice.oconnor@gmail.com
+[push]
+	default = simple

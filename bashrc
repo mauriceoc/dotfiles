@@ -90,10 +90,6 @@ alias gra='grailsRun run-app'
 alias grd='grailsRun refresh-dependencies'
 alias gc='grailsRun compile'
 
-# brew install thefuck
-alias f='fuck'
-eval "$(thefuck --alias)"
-
 # brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion

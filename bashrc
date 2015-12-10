@@ -89,9 +89,9 @@ function chrome () {
 }
 
 # ls
-alias l='clear; pwd; ls -lh'
+alias l='clear; pwd; ls -oh'
 alias sl='ls'
-alias la='ls -lah'
+alias la='ls -a'
 
 # misc
 alias v='vim'

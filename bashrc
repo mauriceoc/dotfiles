@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # colours
-
 BLACK=$(tput setaf 0)
 RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
@@ -27,7 +26,7 @@ withColor () {
 # echo stuff
 echoRun () {
   echo $@
-  eval $@
+  $@
   echo $@
 }
 
@@ -71,8 +70,6 @@ alias pd='pushd ./'
 # cd
 alias ..='cd ..'
 alias ...='cd ../..'
-
-# cd - projects
 
 # docker
 alias d='docker'

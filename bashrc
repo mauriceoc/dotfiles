@@ -48,7 +48,8 @@ parse_git_branch() {
 }
 
 # Prompt stuff
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$(grb_git_prompt) "
+export PS1="\h:\W\$(grb_git_prompt) \u\$ "
+#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$(grb_git_prompt) "
 export CLICOLOR=1
 
 bind '"\e[A":history-search-backward'

@@ -20,23 +20,14 @@ UNDERLINE=$(tput smul)
 withColor () { 
     COLOR=$1
     CMD=${@:2}
-    echo -e $COLOR; $CMD; echo -e $NORMAL
+    echo -e -n $COLOR; $CMD; echo -e -n $NORMAL
 }
 
 # echo stuff
 echoRun () {
-  echo $@
+  withColor $GREEN echo $@
   $@
-  echo $@
-}
-
-# For Grails
-grailsRun() {
-  echoRun grails $@
-}
-
-grailsDebug() {
-  echoRun grails -debug $@
+  withColor $GREEN echo $@
 }
 
 colorPwd() {
@@ -70,6 +61,10 @@ alias v='vim'
 alias h='history'
 alias chromex="chrome --args --disable-web-security"
 alias pd='pushd ./'
+
+# pushd / popd
+alias p='pushd'
+alias o='popd'
 
 # cd
 alias ..='cd ..'

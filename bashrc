@@ -60,7 +60,6 @@ alias la='ls -a'
 alias v='vim'
 alias h='history'
 alias chromex="chrome --args --disable-web-security"
-alias pd='pushd ./'
 
 # pushd / popd
 alias p='pushd'

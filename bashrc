@@ -75,7 +75,6 @@ alias b2d='boot2docker start; $(boot2docker shellinit)'
 
 # brew install git
 alias g='git'
-alias gf='git-flow'
 alias gs='git status --short'
 alias gg='git grep'
 alias gl='git ls-files'

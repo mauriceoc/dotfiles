@@ -53,11 +53,6 @@ endif
 
 colorscheme solarized
 
-"try
-"        colorscheme darkblue
-"catch
-"endtry
-
 "set autochdir 		    " change directory to the current buffer when opening files.
 "set cursorline		    " display a line under the cursor 
 

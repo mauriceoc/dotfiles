@@ -52,7 +52,7 @@ function chrome () {
 }
 
 # ls
-alias l="{ clear && colorPwd && ls -oh && echo; }"
+alias l="{ clear && ls -oh; }"
 alias sl='ls'
 alias la='ls -a'
 

@@ -44,12 +44,12 @@ set secure
 
 set so=7                " start vertical scroll from 7 lines
 
-let hour = strftime("%H")
-if 6 <= hour && hour < 18
-  set background=light
-else
+"let hour = strftime("%H")
+"if 6 <= hour && hour < 18
+        "set background=light
+  "else
   set background=dark
-endif
+  "endif
 
 colorscheme solarized
 

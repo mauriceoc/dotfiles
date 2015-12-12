@@ -5,3 +5,7 @@
 # swap dir
 #
 .swp
+
+# tmux plugin ignores
+tmux/plugins/*
+!tmux/plugins/tpm

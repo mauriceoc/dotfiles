@@ -57,7 +57,8 @@ alias sl='ls'
 alias la='ls -a'
 
 # misc
-alias v='vim'
+alias vim='nvim'
+alias v='nvim'
 alias h='history'
 alias chromex="chrome --args --disable-web-security"
 

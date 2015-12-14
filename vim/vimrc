@@ -167,3 +167,6 @@ inoremap <s-tab> <c-n>
 " source vimrc
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" map jk to esc
+:inoremap jk <esc>
+

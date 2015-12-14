@@ -105,7 +105,7 @@ noremap <Right> <NOP>
 noremap h <NOP>
 noremap l <NOP>
 
-" disable search with esc esc
+" clear search with esc esc
 nnoremap <silent> <Esc><Esc> :noh<CR> :call clearmatches()<CR>
 
 " The Silver Searcher - brew install ag - fast search
@@ -167,13 +167,13 @@ inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
 
 " open vimrc for editing
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " source vimrc
-:nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " map jk to esc
-:inoremap jk <esc>
+inoremap jk <esc>
 
 " disable esc
 inoremap <esc> <nop>

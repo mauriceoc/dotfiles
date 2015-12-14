@@ -13,6 +13,9 @@ filetype indent on
 " Turn on that syntax highlighting
 syntax on
 
+" Setup ctags
+set tags=./tags,tags;$HOME
+
 " Why is this not a default
 set hidden
 

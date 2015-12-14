@@ -177,3 +177,7 @@ inoremap jk <esc>
 
 " disable esc
 inoremap <esc> <nop>
+
+" show gundo
+nnoremap <leader>u :GundoToggle<CR>
+

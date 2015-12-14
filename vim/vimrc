@@ -30,14 +30,6 @@ set showmode
 set wildmenu
 set wildmode=longest:list,full
 
-" Let's make it easy to edit this file (mnemonic for the key sequence is
-" 'e'dit 'v'imrc)
-nmap <silent> ,ev :e $MYVIMRC<cr>
-
-" And to source this file as well (mnemonic for the key sequence is
-" 's'ource 'v'imrc)
-nmap <silent> ,sv :so $MYVIMRC<cr>
-
 let g:netrw_liststyle = 3 " netrw browser settings
 let g:netrw_altv = 1
 let g:netrw_banner = 0
@@ -47,13 +39,7 @@ set secure
 
 set so=7                " start vertical scroll from 7 lines
 
-"let hour = strftime("%H")
-"if 6 <= hour && hour < 18
-        "set background=light
-  "else
-  set background=dark
-  "endif
-
+set background=dark
 colorscheme solarized
 
 "set autochdir 		    " change directory to the current buffer when opening files.
@@ -97,9 +83,6 @@ set pastetoggle=<F10> " stop the crazy indent on paste
 
 au BufNewFile,BufRead *.gradle setf groovy
 autocmd BufNewFile,BufRead *.json set ft=javascript
-
-" map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> }
 
 " to exit insert mode
 inoremap § <esc>

@@ -31,11 +31,13 @@ set showmode
 set wildmenu
 set wildmode=longest:list,full
 
-let g:netrw_liststyle = 3 " netrw browser settings
+" netrw browser settings
+let g:netrw_liststyle = 3 
 let g:netrw_altv = 1
 let g:netrw_banner = 0
 
-set exrc " project specific .vimrc files
+" project specific .vimrc files
+set exrc 
 set secure
 
 set so=7                " start vertical scroll from 7 lines
@@ -82,8 +84,11 @@ set viminfo^=%          " remember info about open buffers on close
 
 set pastetoggle=<F10> " stop the crazy indent on paste
 
-au BufNewFile,BufRead *.gradle setf groovy
-autocmd BufNewFile,BufRead *.json set ft=javascript
+augroup filetypes
+        autocmd!
+        autocmd BufNewFile,BufRead *.gradle setf groovy
+        autocmd BufNewFile,BufRead *.json set ft=javascript
+augroup END
 
 " to exit insert mode
 inoremap § <esc>
@@ -145,18 +150,18 @@ let g:indentLine_char = '│'
 
 " disable conceal
 if version >= 703 
-   set conceallevel=0 
-   autocmd FileType * setlocal conceallevel=0 
+        set conceallevel=0 
+        autocmd FileType * setlocal conceallevel=0 
 endif 
 
-" MULTIPURPOSE TAB KEY - Indent if we're at the beginning of a line. Else, do completion.
+" tab key - indent if we're at the beginning of a line else do completion.
 function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
+        let col = col('.') - 1
+        if !col || getline('.')[col - 1] !~ '\k'
+                return "\<tab>"
+        else
+                return "\<c-p>"
+        endif
 endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
@@ -170,3 +175,5 @@ inoremap <s-tab> <c-n>
 " map jk to esc
 :inoremap jk <esc>
 
+" disable esc
+inoremap <esc> <nop>

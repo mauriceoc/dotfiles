@@ -1,5 +1,6 @@
 silent! execute pathogen#infect() " for Pathogen
 
+" set the leader to comma
 let mapleader=","
 
 " Forget being compatible with good ol' vi
@@ -159,3 +160,10 @@ function! InsertTabWrapper()
 endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
+
+" open vimrc for editing
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" source vimrc
+:nnoremap <leader>sv :source $MYVIMRC<cr>
+

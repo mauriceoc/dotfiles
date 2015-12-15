@@ -42,7 +42,8 @@ bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
 # LS colours
-export LSCOLORS=ExFxBxDxCxegedabagacad
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+#export LSCOLORS=ExFxBxDxCxegedabagacad
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
@@ -98,6 +99,10 @@ alias gca='grailsRun clean-all'
 alias gra='grailsRun run-app'
 alias grd='grailsRun refresh-dependencies'
 alias gc='grailsRun compile'
+
+# edit this file
+alias eb='vim ~/.bashrc'
+alias sb='source ~/.bashrc'
 
 # brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then

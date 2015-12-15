@@ -1,7 +1,7 @@
 silent! execute pathogen#infect() " for Pathogen
 
 " set the leader to comma
-let mapleader="-"
+let mapleader=","
 
 " Forget being compatible with good ol' vi
 set nocompatible

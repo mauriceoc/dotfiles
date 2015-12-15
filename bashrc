@@ -18,20 +18,20 @@ REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
 
 withColor () { 
-    COLOR=$1
-    CMD=${@:2}
-    echo -e -n $COLOR; $CMD; echo -e -n $NORMAL
+        COLOR=$1
+        CMD=${@:2}
+        echo -e -n $COLOR; $CMD; echo -e -n $NORMAL
 }
 
 # echo stuff
 echoRun () {
-  withColor $GREEN echo $@
-  $@
-  withColor $GREEN echo $@
+        withColor $GREEN echo $@
+        $@
+        withColor $GREEN echo $@
 }
 
 colorPwd() {
-    withColor $GREEN pwd 
+        withColor $GREEN pwd 
 }
 
 # Prompt stuff
@@ -49,7 +49,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 function chrome () {
-  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
 }
 
 # ls
@@ -95,10 +95,10 @@ alias psql='pgcli'
 alias pg='pgcli'
 
 # grails
-alias gca='grailsRun clean-all'
-alias gra='grailsRun run-app'
-alias grd='grailsRun refresh-dependencies'
-alias gc='grailsRun compile'
+alias gca='echoRun jenv exec grails clean-all'
+alias gra='echoRun jenv exec grails run-app'
+alias grd='echoRun jenv exec grails refresh-dependencies'
+alias gc='echoRun jenv exec grails compile'
 
 # edit this file
 alias eb='vim ~/.bashrc'
@@ -106,7 +106,7 @@ alias sb='source ~/.bashrc'
 
 # brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+        . $(brew --prefix)/etc/bash_completion
 fi
 
 # brew install jenv

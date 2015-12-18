@@ -105,6 +105,12 @@ noremap <Right> <NOP>
 noremap h <NOP>
 noremap l <NOP>
 
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
 " clear search with esc esc
 nnoremap <silent> <Esc><Esc> :noh<CR> :call clearmatches()<CR>
 
@@ -170,7 +176,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " map jk to esc
-inoremap jk <esc>
+"inoremap jk <esc>
 
 " disable esc
 inoremap <esc> <nop>

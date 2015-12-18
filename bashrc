@@ -30,6 +30,10 @@ echoRun () {
         withColor $GREEN echo $@
 }
 
+grailsRun() {
+    jenv exec grails ${@}
+}
+
 colorPwd() {
         withColor $GREEN pwd 
 }
@@ -95,10 +99,11 @@ alias psql='pgcli'
 alias pg='pgcli'
 
 # grails
-alias gca='echoRun jenv exec grails clean-all'
-alias gra='echoRun jenv exec grails run-app'
-alias grd='echoRun jenv exec grails refresh-dependencies'
-alias gc='echoRun jenv exec grails compile'
+alias gca='echoRun grailsRun clean-all'
+alias gra='echoRun grailsRun run-app'
+alias grao='echoRun grailsRun -debug --offline run-app' 
+alias grd='echoRun grailsRun refresh-dependencies'
+alias gc='echoRun grailsRun compile'
 
 # edit this file
 alias eb='vim ~/.bashrc'

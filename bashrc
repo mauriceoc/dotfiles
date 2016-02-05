@@ -80,7 +80,7 @@ alias ...='cd ../...'
 
 # docker
 alias d='docker'
-alias b2d='boot2docker start; $(boot2docker shellinit)'
+eval $(docker-machine env default)
 
 # brew install git
 alias g='git'
@@ -99,7 +99,6 @@ alias tinyproxy-log='tail -f -n0  /usr/local/Cellar/tinyproxy/1.8.3/var/log/tiny
 alias startpg='postgres -D /usr/local/var/postgres/'
 
 # brew install pgcli
-alias psql='pgcli'
 alias pg='pgcli'
 
 # grails

@@ -9,6 +9,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [alias]
+    dsf = "!git diff --color $@ | diff-so-fancy"
     squash-to-root = rebase -i --root
     root = rev-parse --show-toplevel
     unstage = reset HEAD --

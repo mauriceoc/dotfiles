@@ -79,8 +79,10 @@ alias ..='cd ..'
 alias ...='cd ../...'
 
 # docker
-alias d='docker'
-eval $(docker-machine env default)
+alias d='docker-compose'
+alias docker-map-postgres='docker-machine ssh default -L 5432:localhost:5432'
+
+eval "$(docker-machine env default)"
 
 # brew install git
 alias g='git'

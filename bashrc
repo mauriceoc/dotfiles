@@ -65,6 +65,8 @@ alias l="{ clear && ls -oh; }"
 alias sl='ls'
 alias la='ls -a'
 
+alias port='lsof -i'
+
 # misc
 alias v='vim'
 alias h='history'

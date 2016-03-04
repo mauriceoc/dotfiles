@@ -19,7 +19,7 @@ UNDERLINE=$(tput smul)
 
 #bash-sensible needs bash 4.something
 BASH_SENSIBLE="$HOME/dotfiles/bash-sensible/sensible.bash"
-if [ -e $BASH_SENSIBLE ]; then 
+if [ -f $BASH_SENSIBLE ]; then 
     source $BASH_SENSIBLE
 fi
 
@@ -91,7 +91,6 @@ alias ...='cd ../...'
 alias d='docker-compose'
 alias docker-map-postgres='docker-machine ssh default -L 5432:localhost:5432'
 
-eval "$(docker-machine env default)"
 
 # brew install git
 alias g='git'
@@ -134,6 +133,9 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # Initialize rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Initialize docker env
+if which docker-machine > /dev/null; then eval "$(docker-machine env default)"; fi
 
 # GVM
 [[ -s "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh" ]] && source "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh"

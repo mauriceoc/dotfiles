@@ -20,7 +20,7 @@ UNDERLINE=$(tput smul)
 #bash-sensible needs bash 4.something
 BASH_SENSIBLE="$HOME/dotfiles/bash-sensible/sensible.bash"
 if [ -f $BASH_SENSIBLE ]; then 
-    source $BASH_SENSIBLE
+        source $BASH_SENSIBLE
 fi
 
 withColor () { 
@@ -37,7 +37,7 @@ echoRun () {
 }
 
 grailsRun() {
-    jenv exec grails ${@}
+        jenv exec grails ${@}
 }
 
 colorPwd() {
@@ -45,8 +45,8 @@ colorPwd() {
 }
 
 if [ `uname` = 'Darwin' ]; then
-# OSX - Set a blazingly fast keyboard repeat rate
-    defaults write NSGlobalDomain KeyRepeat -int 0
+        # OSX - Set a blazingly fast keyboard repeat rate
+        defaults write NSGlobalDomain KeyRepeat -int 0
 fi
 
 # Prompt stuff
@@ -64,7 +64,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 function chrome () {
-    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
 }
 
 # ls

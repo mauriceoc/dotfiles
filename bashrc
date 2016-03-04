@@ -17,6 +17,8 @@ BLINK=$(tput blink)
 REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
 
+source 'dotfiles/bash-sensible/sensible.bash'
+
 withColor () { 
         COLOR=$1
         CMD=${@:2}

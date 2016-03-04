@@ -18,7 +18,10 @@ REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
 
 #bash-sensible needs bash 4.something
-source 'dotfiles/bash-sensible/sensible.bash'
+BASH_SENSIBLE="$HOME/dotfiles/bash-sensible/sensible.bash"
+if [ -e $BASH_SENSIBLE ]; then 
+    source $BASH_SENSIBLE
+fi
 
 withColor () { 
         COLOR=$1
@@ -41,9 +44,10 @@ colorPwd() {
         withColor $GREEN pwd 
 }
 
+if [ `uname` = 'Darwin' ]; then
 # OSX - Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
-
+    defaults write NSGlobalDomain KeyRepeat -int 0
+fi
 
 # Prompt stuff
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$(__git_ps1) "
@@ -60,7 +64,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 function chrome () {
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
 }
 
 # ls

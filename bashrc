@@ -44,8 +44,8 @@ colorPwd() {
         withColor $GREEN pwd 
 }
 
+# OSX - Set a blazingly fast keyboard repeat rate
 if [ `uname` = 'Darwin' ]; then
-        # OSX - Set a blazingly fast keyboard repeat rate
         defaults write NSGlobalDomain KeyRepeat -int 0
 fi
 

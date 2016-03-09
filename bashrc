@@ -99,6 +99,7 @@ alias gs='git status --short'
 alias gg='git grep'
 alias gl='git ls-files'
 alias gls='git ls-files'
+alias gf='git-flow'
 
 # mongo
 alias mongo-start='mongod --config /usr/local/etc/mongod.conf'

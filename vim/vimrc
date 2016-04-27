@@ -23,11 +23,10 @@ set hidden
 " Don't update the display while executing macros
 set lazyredraw
 
-" At least let yourself know what mode you're in
+" Show what mode vim is in
 set showmode
 
-" Enable enhanced command-line completion. Presumes you have compiled
-" with +wildmenu. See :help 'wildmenu'
+" Enable enhanced command-line completion. 
 set wildmenu
 set wildmode=longest:list,full
 
@@ -186,4 +185,7 @@ inoremap <esc> <nop>
 
 " show gundo
 nnoremap <leader>u :GundoToggle<CR>
+
+" command line mode - expand %% to dir of current file
+cnoremap <expr> %% expand('%:h').'/'
 

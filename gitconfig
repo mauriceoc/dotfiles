@@ -9,20 +9,25 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [alias]
-    aa = add --all
+    
+    di = diff
     dc = diff --cached
+
+    aa = add --all
+
     dsf = "!git diff --color $@ | diff-so-fancy"
     squash-to-root = rebase -i --root
     root = rev-parse --show-toplevel
     unstage = reset HEAD --
-	cho = checkout
-	co = checkout
 	s = status
 	reshh = reset --hard HEAD
 	l = log -n5
 	lol = log --oneline
 	ls = ls-files
-	a = add -A
+
+	cho = checkout
+	co = checkout
+
     c = commit
 	ca = commit -a 
     cam = commit -a --amend

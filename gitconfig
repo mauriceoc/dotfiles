@@ -16,12 +16,14 @@
     root = rev-parse --show-toplevel
     unstage = reset HEAD --
 	cho = checkout
+	co = checkout
 	s = status
 	reshh = reset --hard HEAD
 	l = log -n5
 	lol = log --oneline
 	ls = ls-files
 	a = add -A
+    c = commit
 	ca = commit -a 
     cam = commit -a --amend
 [user]

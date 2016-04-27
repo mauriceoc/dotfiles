@@ -78,7 +78,7 @@ alias port='lsof -i'
 # misc
 alias v='vim'
 alias h='history'
-alias chromex="chrome --args --disable-web-security"
+alias chromex="chrome --args --disable-web-security --user-data-dir"
 
 # pushd / popd
 alias p='pushd'

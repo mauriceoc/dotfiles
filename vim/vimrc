@@ -186,6 +186,9 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " show gundo
 nnoremap <leader>u :GundoToggle<CR>
 
+" Can't be bothered to understand ESC vs <c-c> in insert mode
+imap <c-c> <esc>
+
 " command line mode - expand %% to dir of current file
 " cnoremap <expr> %% expand('%:h').'/'
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>

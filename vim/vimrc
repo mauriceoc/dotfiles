@@ -187,5 +187,5 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>u :GundoToggle<CR>
 
 " command line mode - expand %% to dir of current file
-cnoremap <expr> %% expand('%:h').'/'
-
+" cnoremap <expr> %% expand('%:h').'/'
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>

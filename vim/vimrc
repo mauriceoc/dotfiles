@@ -160,15 +160,16 @@ if version >= 703
 endif 
 
 " tab key - indent if we're at the beginning of a line else do completion.
-function! InsertTabWrapper()
-        let col = col('.') - 1
-        if !col || getline('.')[col - 1] !~ '\k'
-                return "\<tab>"
-        else
-                return "\<c-p>"
-        endif
-endfunction
-inoremap <expr> <tab> InsertTabWrapper()
+"function! InsertTabWrapper()
+"        let col = col('.') - 1
+"        if !col || getline('.')[col - 1] !~ '\k'
+"                return "\<tab>"
+"        else
+"                return "\<c-p>"
+"        endif
+"endfunction
+
+"inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
 
 " open vimrc for editing

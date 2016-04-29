@@ -64,6 +64,10 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
+# grep color
+export GREP_OPTIONS='--color=always'
+export GREP_COLOR='1;35;40'
+
 function chrome () {
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $* 2>&1 &
 }

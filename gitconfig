@@ -10,6 +10,8 @@
 	trustExitCode = true
 [alias]
     
+    pr = pull --rebase
+
     di = diff
     dc = diff --cached
 

@@ -181,7 +181,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 "inoremap jk <esc>
 
 " disable esc
-inoremap <esc> <nop>
+"inoremap <esc> <nop>
 
 " show gundo
 nnoremap <leader>u :GundoToggle<CR>

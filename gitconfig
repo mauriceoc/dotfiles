@@ -15,6 +15,10 @@
     di = diff
     dc = diff --cached
 
+    sf=diff-tree --no-commit-id --name-only -r
+
+    br=branch -v
+
     aa = add --all
 
     dsf = "!git diff --color $@ | diff-so-fancy"
@@ -24,7 +28,7 @@
 	s = status
 	reshh = reset --hard HEAD
 	l = log -n5
-	lol = log --oneline
+	lol = log --oneline --graph
 	ls = ls-files
 
 	cho = checkout

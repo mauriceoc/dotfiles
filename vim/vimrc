@@ -193,3 +193,8 @@ imap <c-c> <esc>
 " command line mode - expand %% to dir of current file
 " cnoremap <expr> %% expand('%:h').'/'
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+
+" Syntastic
+"
+let g:syntastic_javascript_checkers = ['eslint']
+

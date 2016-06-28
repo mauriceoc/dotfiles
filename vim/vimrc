@@ -86,7 +86,6 @@ set pastetoggle=<F10> " stop the crazy indent on paste
 augroup filetypes
         autocmd!
         autocmd BufNewFile,BufRead *.gradle setf groovy
-        autocmd BufNewFile,BufRead *.json set ft=javascript
 augroup END
 
 " to exit insert mode

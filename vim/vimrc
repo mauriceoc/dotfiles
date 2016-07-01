@@ -11,6 +11,10 @@ filetype on
 filetype plugin on
 filetype indent on
 
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
+
 " Turn on that syntax highlighting
 syntax on
 
@@ -204,6 +208,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height = 3
 
 " vimwiki
 "

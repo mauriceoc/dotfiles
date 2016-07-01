@@ -92,6 +92,7 @@ alias o='popd'
 # cd
 alias ..='cd ..'
 alias ...='cd ../...'
+alias dotf='cd ~/dotfiles'
 
 # docker
 alias d='docker-compose'

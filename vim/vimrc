@@ -189,9 +189,9 @@ nnoremap <leader>gb :Gbrowse<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " location window - next / previous
-nnoremap <leader>l :lnext<cr>
-nnoremap <leader>L :lprevious<cr>
-nnoremap <leader><esc> :lclose<cr>
+"nnoremap <leader>l :lnext<cr>
+"nnoremap <leader>L :lprevious<cr>
+"nnoremap <leader><esc> :lclose<cr>
 
 " map jk to esc
 "inoremap jk <esc>

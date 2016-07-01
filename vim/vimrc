@@ -229,3 +229,8 @@ nnoremap <leader>se :Errors<cr>
 "
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+" emmet-vim
+" 
+let g:user_emmet_leader_key = '<tab>'
+

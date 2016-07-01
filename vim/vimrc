@@ -179,7 +179,12 @@ inoremap <s-tab> <c-n>
 " open vimrc for editing
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
+" fugitive
 nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gr :Greadf<cr>
+nnoremap <leader>gb :Gbrowse<cr>
 
 " source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>

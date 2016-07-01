@@ -3,6 +3,9 @@ silent! execute pathogen#infect() " for Pathogen
 " set the leader to comma
 let mapleader=","
 
+" Turn on that syntax highlighting
+syntax on
+
 " Forget being compatible with good ol' vi
 set nocompatible
 
@@ -15,8 +18,6 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 
-" Turn on that syntax highlighting
-syntax on
 
 " Setup ctags
 set tags=./tags,tags;$HOME
@@ -177,6 +178,8 @@ inoremap <s-tab> <c-n>
 
 " open vimrc for editing
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+nnoremap <leader>gs :Gstatus<cr>
 
 " source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>

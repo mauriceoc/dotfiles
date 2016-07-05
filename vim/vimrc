@@ -3,6 +3,8 @@ silent! execute pathogen#infect() " for Pathogen
 " set the leader to comma
 let mapleader=","
 
+set backspace=2 " make backspace work like most other apps
+
 " Turn on that syntax highlighting
 syntax on
 
@@ -235,3 +237,5 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 let g:user_emmet_leader_key = '<tab>'
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+

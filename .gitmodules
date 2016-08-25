@@ -55,3 +55,6 @@
 [submodule "vim/bundle/vim-haskell-indent"]
 	path = vim/bundle/vim-haskell-indent
 	url = https://github.com/itchyny/vim-haskell-indent.git
+[submodule "vim/bundle/typescript-vim"]
+	path = vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git

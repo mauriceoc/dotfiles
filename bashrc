@@ -44,11 +44,6 @@ colorPwd() {
         withColor $GREEN pwd 
 }
 
-# OSX - Set a blazingly fast keyboard repeat rate
-if [ `uname` = 'Darwin' ]; then
-        defaults write NSGlobalDomain KeyRepeat -int 0
-fi
-
 # Prompt stuff
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$(__git_ps1) "
 export CLICOLOR=1

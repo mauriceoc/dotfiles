@@ -54,7 +54,7 @@ colorscheme solarized
 "set cursorline		    " display a line under the cursor 
 
 set nu                  " line numbers
-"set clipboard=unnamed
+set clipboard=unnamed
 set ruler               " show the cursor position all the time
 set laststatus=2 	    " always show the status line
 set statusline=%f       " Path to the file

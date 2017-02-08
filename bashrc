@@ -87,12 +87,11 @@ alias o='popd'
 # cd
 alias ..='cd ..'
 alias ...='cd ../...'
-alias cddf='cd ~/dotfiles'
+alias cddot='cd ~/dotfiles'
 
 # docker
 alias d='docker-compose'
 alias docker-map-postgres='docker-machine ssh default -L 5432:localhost:5432'
-
 
 # brew install git
 alias g='git'
@@ -107,9 +106,6 @@ alias mongo-start='mongod --config /usr/local/etc/mongod.conf'
 
 # brew install tinyproxy
 alias tinyproxy-log='tail -f -n0  /usr/local/Cellar/tinyproxy/1.8.3/var/log/tinyproxy/tinyproxy.log'
-
-# postgres
-alias startpg='postgres -D /usr/local/var/postgres/'
 
 # brew install pgcli
 alias pg='pgcli'
@@ -130,15 +126,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
 fi
 
-# brew install jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-
 # Initialize rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Initialize docker env
 if which docker-machine > /dev/null; then eval "$(docker-machine env default)"; fi
 
-# GVM
-[[ -s "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh" ]] && source "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "/home/dudette/.sdkman/bin/sdkman-init.sh" ]] && source "/home/dudette/.sdkman/bin/sdkman-init.sh"

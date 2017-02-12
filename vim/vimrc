@@ -238,4 +238,6 @@ let g:user_emmet_leader_key = '<leader>e'
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
+" elm-vim
+let g:elm_format_autosave = 1
 

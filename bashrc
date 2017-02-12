@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ -f "$HOME/bin" ]; then
+    export PATH="$PATH:$HOME/bin"    
+fi
+
 # colours
 BLACK=$(tput setaf 0)
 RED=$(tput setaf 1)

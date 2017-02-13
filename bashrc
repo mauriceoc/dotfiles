@@ -1,8 +1,6 @@
 #!/bin/bash
 
-if [ -f "$HOME/bin" ]; then
-    export PATH="$PATH:$HOME/bin"    
-fi
+export PATH="$PATH:$HOME/bin"    
 
 # colours
 BLACK=$(tput setaf 0)

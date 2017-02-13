@@ -6,6 +6,8 @@
 #
 .swp
 
+vim/view
+
 # tmux plugin ignores
 tmux/plugins/*
 !tmux/plugins/tpm

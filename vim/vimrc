@@ -158,11 +158,7 @@ let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '│'
 
-" disable conceal
-if version >= 703 
-        set conceallevel=0 
-        autocmd FileType * setlocal conceallevel=0 
-endif 
+set conceallevel=0
 
 " tab key - indent if we're at the beginning of a line else do completion.
 "function! InsertTabWrapper()

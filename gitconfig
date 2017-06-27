@@ -10,6 +10,8 @@
 	trustExitCode = true
 [alias]
     
+    leaderboard = shortlog -sn
+
     pr = pull --rebase
 
     di = diff

@@ -38,10 +38,6 @@ echoRun () {
         withColor $GREEN echo $@
 }
 
-grailsRun() {
-        jenv exec grails ${@}
-}
-
 colorPwd() {
         withColor $GREEN pwd 
 }
@@ -112,13 +108,6 @@ alias tinyproxy-log='tail -f -n0  /usr/local/Cellar/tinyproxy/1.8.3/var/log/tiny
 
 # brew install pgcli
 alias pg='pgcli'
-
-# grails
-alias gca='echoRun grailsRun clean-all'
-alias gra='echoRun grailsRun run-app'
-alias grao='echoRun grailsRun -debug --offline run-app' 
-alias grd='echoRun grailsRun refresh-dependencies'
-alias gc='echoRun grailsRun compile'
 
 # edit this file
 alias eb='vim ~/.bashrc'

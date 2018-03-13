@@ -70,6 +70,7 @@ function chrome () {
 
 # ls
 alias l="{ clear && ls -oh; }"
+alias t="tree -C"
 alias sl='ls'
 alias la='ls -a'
 

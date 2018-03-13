@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
 export PATH="$PATH:$HOME/bin"    
 
 # colours

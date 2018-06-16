@@ -237,3 +237,6 @@ autocmd FileType html,css EmmetInstall
 " elm-vim
 let g:elm_format_autosave = 1
 
+" no jsx extension required for jsx formatting
+let g:jsx_ext_required = 0
+

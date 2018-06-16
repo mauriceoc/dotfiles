@@ -89,6 +89,7 @@ alias o='popd'
 alias ..='cd ..'
 alias ...='cd ../...'
 alias cddot='cd ~/dotfiles'
+alias cdc='cd ~/code'
 
 # docker
 alias dc='docker-compose'
@@ -115,6 +116,7 @@ alias pg='pgcli'
 # edit this file
 alias eb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
+
 
 # brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then

@@ -1,8 +1,6 @@
 # dotfiles
 
-dotfiles
-
-Use git clone --recursive as project contains submodules
+Use `git clone --recursive` as project contains submodules
 
 ## tpm
 
@@ -16,4 +14,4 @@ For tpm instructions see [here](https://github.com/tmux-plugins/tpm).
 
 Get the silver searcher to speed up vim searches
 
-brew install ag
+`brew install ag`

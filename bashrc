@@ -1,5 +1,9 @@
 #!/bin/bash
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+export PATH="$PATH:$HOME/bin"    
+
 # colours
 BLACK=$(tput setaf 0)
 RED=$(tput setaf 1)
@@ -36,10 +40,6 @@ echoRun () {
         withColor $GREEN echo $@
 }
 
-grailsRun() {
-        jenv exec grails ${@}
-}
-
 colorPwd() {
         withColor $GREEN pwd 
 }
@@ -70,6 +70,7 @@ function chrome () {
 
 # ls
 alias l="{ clear && ls -oh; }"
+alias t="tree -C"
 alias sl='ls'
 alias la='ls -a'
 
@@ -87,12 +88,13 @@ alias o='popd'
 # cd
 alias ..='cd ..'
 alias ...='cd ../...'
-alias cddf='cd ~/dotfiles'
+alias cddot='cd ~/dotfiles'
+alias cdc='cd ~/code'
 
 # docker
-alias d='docker-compose'
+alias dc='docker-compose'
 alias docker-map-postgres='docker-machine ssh default -L 5432:localhost:5432'
-
+alias denv='eval "$(docker-machine env default)"'
 
 # brew install git
 alias g='git'
@@ -108,31 +110,18 @@ alias mongo-start='mongod --config /usr/local/etc/mongod.conf'
 # brew install tinyproxy
 alias tinyproxy-log='tail -f -n0  /usr/local/Cellar/tinyproxy/1.8.3/var/log/tinyproxy/tinyproxy.log'
 
-# postgres
-alias startpg='postgres -D /usr/local/var/postgres/'
-
 # brew install pgcli
 alias pg='pgcli'
-
-# grails
-alias gca='echoRun grailsRun clean-all'
-alias gra='echoRun grailsRun run-app'
-alias grao='echoRun grailsRun -debug --offline run-app' 
-alias grd='echoRun grailsRun refresh-dependencies'
-alias gc='echoRun grailsRun compile'
 
 # edit this file
 alias eb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
 
+
 # brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
 fi
-
-# brew install jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # Initialize rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -140,5 +129,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Initialize docker env
 if which docker-machine > /dev/null; then eval "$(docker-machine env default)"; fi
 
-# GVM
-[[ -s "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh" ]] && source "/Users/mauriceoconnor/.gvm/bin/gvm-init.sh"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

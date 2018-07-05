@@ -10,6 +10,8 @@
 	trustExitCode = true
 [alias]
     
+    leaderboard = shortlog -sn
+
     pr = pull --rebase
 
     di = diff
@@ -38,7 +40,7 @@
 	ca = commit -a 
     cam = commit -a --amend
 [user]
-	name = 
-	email = maurice.oconnor@gmail.com
+	name = moc
+	email = maurice@macbot.com
 [push]
 	default = simple

@@ -161,11 +161,7 @@ let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '│'
 
-" disable conceal
-if version >= 703 
-        set conceallevel=0 
-        autocmd FileType * setlocal conceallevel=0 
-endif 
+let g:indentLine_setConceal = 0
 
 " tab key - indent if we're at the beginning of a line else do completion.
 "function! InsertTabWrapper()
@@ -241,4 +237,9 @@ let g:user_emmet_leader_key = '<leader>e'
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
+" elm-vim
+let g:elm_format_autosave = 1
+
+" no jsx extension required for jsx formatting
+let g:jsx_ext_required = 0
 

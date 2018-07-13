@@ -1,5 +1,8 @@
 silent! execute pathogen#infect() " for Pathogen
 
+" turn off swap file
+set noswapfile
+
 " set the leader to comma
 let mapleader=","
 

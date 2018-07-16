@@ -4,11 +4,14 @@ echo "=== CREATE LINKS ==="
 
 #set -e
 
-ln -s ~/dotfiles/bashrc ~/.bashrc
-ln -s ~/dotfiles/pgclirc ~/.pgclirc
-ln -s ~/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/tmux/ ~/.tmux
-ln -s ~/dotfiles/vim/  ~/.vim
+DOT_FILES=$HOME/dotfiles
+
+ln -s $DOT_FILES/bashrc $HOME/.bashrc
+ln -s $DOT_FILES/pgclirc $HOME/.pgclirc
+ln -s $DOT_FILES/gitconfig $HOME/.gitconfig
+ln -s $DOT_FILES/tmux/tmux.conf $HOME/.tmux.conf
+
+ln -s $DOT_FILES/tmux/ $HOME/.tmux
+ln -s $DOT_FILES/vim/  $HOME/.vim
 
 

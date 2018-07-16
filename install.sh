@@ -4,6 +4,6 @@ set -e
 
 echo "=== DOTFILES ==="
 
-brew install pgcli homebrew ag vim bash-completion nvm
+brew install pgcli homebrew ag vim bash-completion nvm bash
 
 

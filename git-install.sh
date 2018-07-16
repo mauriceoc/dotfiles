@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -x
 
 echo "=== CLONE GIT REPOS ==="
 

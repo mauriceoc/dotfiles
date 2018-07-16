@@ -3,6 +3,7 @@
 echo "=== CREATE LINKS ==="
 
 set -e
+set -x
 
 DOT_FILES=$HOME/dotfiles
 

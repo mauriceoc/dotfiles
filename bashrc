@@ -22,7 +22,7 @@ REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
 
 #bash-sensible needs bash 4.something
-BASH_SENSIBLE="$HOME/dotfiles/bash-sensible/sensible.bash"
+BASH_SENSIBLE="$HOME/dotfiles/repos/bash-sensible/sensible.bash"
 if [ -f $BASH_SENSIBLE ]; then 
         source $BASH_SENSIBLE
 fi

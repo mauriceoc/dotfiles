@@ -113,6 +113,7 @@ alias tinyproxy-log='tail -f -n0  /usr/local/Cellar/tinyproxy/1.8.3/var/log/tiny
 
 # brew install pgcli
 alias pg='pgcli'
+alias mvn='$MAVEN_HOME/bin/mvn'
 
 # edit this file
 alias eb='vim ~/.bashrc'

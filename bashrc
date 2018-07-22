@@ -47,7 +47,7 @@ colorPwd() {
 # Prompt stuff
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$(__git_ps1) "
 export CLICOLOR=1
-export EDITOR=vim
+export EDITOR=nvim
 
 #arrows up/down turn into search back / forward in history
 bind '"\e[A":history-search-backward'
@@ -78,7 +78,8 @@ alias la='ls -a'
 alias port='lsof -i'
 
 # misc
-alias v='vim'
+alias vim='nvim'
+alias v='nvim'
 alias h='history'
 alias chromex="chrome --args --disable-web-security --user-data-dir"
 

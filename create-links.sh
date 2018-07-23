@@ -11,7 +11,7 @@ ln -shf ${DOT_FILES}/bashrc ${HOME}/.bashrc
 ln -shf ${DOT_FILES}/bash_profile ${HOME}/.bash_profile
 ln -shf ${DOT_FILES}/pgclirc ${HOME}/.pgclirc
 ln -shf ${DOT_FILES}/gitconfig ${HOME}/.gitconfig
-ln -shf ${DOT_FILES}/tmux/tmux.conf ${HOME}/.tmux.conf
+ln -shf ${DOT_FILES}/tmux.conf ${HOME}/.tmux.conf
 
 ln -shf ${DOT_FILES}/tmux/ ${HOME}/.tmux
 ln -shf ${DOT_FILES}/vim/  ${HOME}/.vim

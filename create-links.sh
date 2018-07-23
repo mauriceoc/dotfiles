@@ -16,4 +16,9 @@ ln -s ${DOT_FILES}/tmux/tmux.conf ${HOME}/.tmux.conf
 ln -s ${DOT_FILES}/tmux/ ${HOME}/.tmux
 ln -s ${DOT_FILES}/vim/  ${HOME}/.vim
 
+NVIM_CONFIG=${HOME}/.config/nvim
+
+mkdir -p ${NVIM_CONFIG}
+
+ln -s ${DOT_FILES}/init.vim ${NVIM_CONFIG}/init.vim
 

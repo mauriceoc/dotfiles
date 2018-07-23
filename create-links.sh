@@ -13,8 +13,9 @@ ln -shf ${DOT_FILES}/pgclirc ${HOME}/.pgclirc
 ln -shf ${DOT_FILES}/gitconfig ${HOME}/.gitconfig
 ln -shf ${DOT_FILES}/tmux.conf ${HOME}/.tmux.conf
 
-ln -shf ${DOT_FILES}/tmux/ ${HOME}/.tmux
-ln -shf ${DOT_FILES}/vim/  ${HOME}/.vim
+#dirs
+ln -shf ${DOT_FILES}/tmux ${HOME}/.tmux
+ln -shf ${DOT_FILES}/vim  ${HOME}/.vim
 
 NVIM_CONFIG=${HOME}/.config/nvim
 

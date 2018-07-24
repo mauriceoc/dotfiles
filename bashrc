@@ -116,7 +116,11 @@ alias tinyproxy-log='tail -f -n0  /usr/local/Cellar/tinyproxy/1.8.3/var/log/tiny
 alias pg='pgcli'
 alias mvn='$MAVEN_HOME/bin/mvn'
 
-alias did="vim +'normal Go' +'r!date' ~/did.txt"
+# did file
+DID_FILE=${HOME}/.did
+DID_FILE_BAK=${HOME}/Documents/did.bak.txt
+alias did-bak="comm -2 -3 ${DID_FILE} ${DID_FILE_BAK} >> ${DID_FILE_BAK}"
+alias did="vim +'normal Go' +'r!date' ${DID_FILE} && did-bak"
 
 # edit this file
 alias eb='vim ~/.bashrc'

@@ -106,6 +106,9 @@ alias gl='git ls-files'
 alias gls='git ls-files'
 alias gf='git-flow'
 
+# common bash stuff replaced
+alias cat='bat'
+
 # mongo
 alias mongo-start='mongod --config /usr/local/etc/mongod.conf'
 

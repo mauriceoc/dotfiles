@@ -77,6 +77,8 @@ alias la='ls -a'
 
 alias port='lsof -i'
 
+alias lck='pmset displaysleepnow'
+
 # misc
 alias vim='nvim'
 alias v='nvim'

@@ -59,6 +59,7 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/dotfiles/bin:$PATH"
 
 # grep color
 export GREP_OPTIONS='--color=always'
@@ -85,6 +86,8 @@ alias v='nvim'
 alias h='history'
 alias chromex="chrome --args --disable-web-security --user-data-dir"
 alias tm='tmux'
+
+alias screen-locker='watch -n 5 screen-lock'
 
 # pushd / popd
 alias p='pushd'

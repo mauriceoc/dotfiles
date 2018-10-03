@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Get MacOSX idletime. Shamelessly stolen from http://bit.ly/yVhc5H
+IDLE_TIME=`/usr/sbin/ioreg -c IOHIDSystem | /usr/bin/awk '/HIDIdleTime/ {print int($NF/1000000000); exit}'`
+
+# IDLE_TIME greater than x seconds
+if [ $IDLE_TIME -gt 120 ]; then
+        pmset displaysleepnow
+else
+        echo "$IDLE_TIME"
+fi
+

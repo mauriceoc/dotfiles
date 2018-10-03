@@ -5,6 +5,6 @@ set -e
 if [ `pgrep -f bash.*screen-lock-service | wc -l` -eq 0 ]; then
         watch -n5 screen-lock
 else
-        echo "Already running"
+        echo "screen-lock-service already running"
         exit -1
 fi

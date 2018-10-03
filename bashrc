@@ -84,6 +84,7 @@ alias vim='nvim'
 alias v='nvim'
 alias h='history'
 alias chromex="chrome --args --disable-web-security --user-data-dir"
+alias tm='tmux'
 
 # pushd / popd
 alias p='pushd'

@@ -1,13 +1,16 @@
 #!/bin/bash
 
-echo "=== CREATE LINKS ==="
+echo "=== SETUP ==="
 
 set -e
 set -x
 
-DOT_FILES=${HOME}/dotfiles
+DOT_FILES="${HOME}/dotfiles"
+BASHRC="${HOME}/.bashrc"
+NVIM_CONFIG=${HOME}/.config/nvim
 
-ln -shf ${DOT_FILES}/bashrc ${HOME}/.bashrc
+[ ! -f ${BASHRC} ] && cp ${DOT_FILES}/bash-init ${HOME}/.bashrc
+
 ln -shf ${DOT_FILES}/bash_profile ${HOME}/.bash_profile
 ln -shf ${DOT_FILES}/pgclirc ${HOME}/.pgclirc
 ln -shf ${DOT_FILES}/gitconfig ${HOME}/.gitconfig
@@ -16,8 +19,6 @@ ln -shf ${DOT_FILES}/tmux.conf ${HOME}/.tmux.conf
 #dirs
 ln -shf ${DOT_FILES}/tmux ${HOME}/.tmux
 ln -shf ${DOT_FILES}/vim  ${HOME}/.vim
-
-NVIM_CONFIG=${HOME}/.config/nvim
 
 mkdir -p ${NVIM_CONFIG}
 

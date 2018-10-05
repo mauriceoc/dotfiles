@@ -96,7 +96,7 @@ alias o='popd'
 # cd
 alias ..='cd ..'
 alias ...='cd ../...'
-alias cddot='cd ~/dotfiles'
+alias cdd='cd ~/dotfiles'
 alias cdc='cd ~/code'
 
 # docker
@@ -135,6 +135,8 @@ alias did="vim +'normal Go' +'r!date' ${DID_FILE} && did-bak"
 alias eb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
 
+# react-dev-tools
+alias rdt='react-dev-tools'
 
 # brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -155,3 +157,10 @@ if which docker-machine > /dev/null; then eval "$(docker-machine env default)"; 
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/maurice.oconnor/code/grassland/node_modules/tabtab/.completions/serverless.bash ] && . /Users/maurice.oconnor/code/grassland/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/maurice.oconnor/code/grassland/node_modules/tabtab/.completions/sls.bash ] && . /Users/maurice.oconnor/code/grassland/node_modules/tabtab/.completions/sls.bash

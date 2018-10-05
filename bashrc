@@ -136,7 +136,7 @@ alias eb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
 
 # react-dev-tools
-alias rdt='react-dev-tools'
+alias rdt='react-devtools'
 
 # brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then

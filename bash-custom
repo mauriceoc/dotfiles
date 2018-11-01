@@ -62,6 +62,8 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/dotfiles/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
+export GOPATH="$HOME/go"
+
 # grep color
 export GREP_OPTIONS='--color=always'
 export GREP_COLOR='1;35;40'

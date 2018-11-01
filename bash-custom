@@ -60,6 +60,7 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/dotfiles/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
 
 # grep color
 export GREP_OPTIONS='--color=always'

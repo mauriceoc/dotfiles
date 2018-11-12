@@ -4,3 +4,8 @@
 BASH_CUSTOM="$HOME/dotfiles/bash-custom"
 
 [ -f ${BASH_CUSTOM} ] && . ${BASH_CUSTOM}
+
+# environment variables unique to this machine
+
+# aliases unique to this machine
+

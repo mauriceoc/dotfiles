@@ -2,8 +2,8 @@
 
 # login shell file
 
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
+if [ -f $HOME/.bashrc ]; then
+   source $HOME/.bashrc
 fi
 
 [[ -s "/Users/maurice.oconnor/.gvm/scripts/gvm" ]] && source "/Users/maurice.oconnor/.gvm/scripts/gvm"

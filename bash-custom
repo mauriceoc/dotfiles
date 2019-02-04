@@ -130,6 +130,7 @@ alias dks='docker service'
 alias dkrm='docker rm'
 alias dm='docker-machine'
 alias dkc='docker-compose'
+alias dc='docker-compose'
 
 alias docker-map-postgres='docker-machine ssh default -L 5432:localhost:5432'
 alias denv='eval "$(docker-machine env default)"'

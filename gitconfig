@@ -49,3 +49,6 @@
     show = diff-so-fancy | less --tabs=1,5 -RFX
 [credential]
 	helper = osxkeychain
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P

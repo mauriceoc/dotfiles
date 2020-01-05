@@ -1,3 +1,4 @@
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -7,7 +8,15 @@ autoload -Uz compinit
 compinit
 
 autoload -U colors
+
+# === PLUGINS
 plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)
+
+# === ENVIRONMENT VARIABLES ===
+#
+# interactive shell only!
+export CLICOLOR=1
+export LS_COLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 # === PROMPT ===
 parse_git_branch() {

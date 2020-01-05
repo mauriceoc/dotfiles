@@ -1,3 +1,9 @@
+# === ENVIRONMENT VARIABLES
+#
+# for interactive shell only!
+export CLICOLOR=1
+export LS_COLORS="ExGxBxDxCxEgEdxbxgxcxd"
+
 # === AUTOLOAD CALLS
 autoload -U colors select-word-style
 colors          # colors
@@ -24,12 +30,6 @@ zstyle :compinstall filename '~/.zshrc'
 
 # === PLUGINS
 plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)
-
-# === ENVIRONMENT VARIABLES
-#
-# for interactive shell only!
-export CLICOLOR=1
-export LS_COLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 # === COMPLETION
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}  

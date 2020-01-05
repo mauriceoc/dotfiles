@@ -11,7 +11,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-plugins=(git brew osx)
+plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)
 
 # Aliases
 setopt completealiases

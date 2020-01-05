@@ -21,8 +21,6 @@ setopt bang_hist                # !keyword
 
 bindkey -e
 zstyle :compinstall filename '~/.zshrc'
-autoload -Uz compinit
-compinit
 
 # === PLUGINS
 plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)

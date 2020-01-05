@@ -1,5 +1,7 @@
 # Environment Variables
 export EDITOR=vim
 export BROWSER=safari
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+
+export CLICOLOR=1
+export LS_COLORS="ExGxBxDxCxEgEdxbxgxcxd"
 

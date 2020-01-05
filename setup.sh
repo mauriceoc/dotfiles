@@ -10,7 +10,9 @@ BASHRC="${HOME}/.bashrc"
 NVIM_CONFIG=${HOME}/.config/nvim
 
 # install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [ ! -f '/usr/local/bin/brew' ]; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # execute Brewfile
 brew bundle 

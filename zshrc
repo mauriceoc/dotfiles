@@ -55,3 +55,8 @@ alias gl='git ls-files'
 alias gls='git ls-files'
 alias gf='git-flow'
 
+
+# Zplugin
+source "$HOME/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin

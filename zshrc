@@ -1,10 +1,7 @@
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
 zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
@@ -14,7 +11,7 @@ compinit
 autoload -U colors
 plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)
 
-# Prompt
+# === PROMPT ===
 parse_git_branch() {
         git symbolic-ref --short HEAD 2> /dev/null
 }
@@ -22,7 +19,7 @@ parse_git_branch() {
 setopt PROMPT_SUBST
 PROMPT='%9c%{%F{blue}%} $(parse_git_branch)%{%F{none}%} $ '
 
-# Aliases
+# === ALIASES ===
 setopt completealiases
 
 # ls

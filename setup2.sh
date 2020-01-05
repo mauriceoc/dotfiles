@@ -23,7 +23,3 @@ ln -shf ${DOT_FILES}/tmux.conf ${HOME}/.tmux.conf
 ln -shf ${DOT_FILES}/tmux ${HOME}/.tmux
 ln -shf ${DOT_FILES}/vim  ${HOME}/.vim
 
-# Zplugin
-mkdir ~/.zplugin
-git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
-

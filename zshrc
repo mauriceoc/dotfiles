@@ -5,7 +5,7 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/maurice/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -14,6 +14,7 @@ compinit
 plugins=(git brew osx)
 
 # Aliases
+setopt completealiases
 
 # ls
 alias l='{ clear && ls -oh; }'
@@ -54,5 +55,6 @@ alias gl='git ls-files'
 alias gls='git ls-files'
 alias gf='git-flow'
 
-
-
+# Environment Variables
+export EDITOR=nano
+export BROWSER=firefox

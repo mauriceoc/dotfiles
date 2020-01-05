@@ -11,7 +11,16 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+autoload -U colors
 plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)
+
+# Prompt
+parse_git_branch() {
+        git symbolic-ref --short HEAD 2> /dev/null
+}
+
+setopt PROMPT_SUBST
+PROMPT='%9c%{%F{blue}%} $(parse_git_branch)%{%F{none}%} $ '
 
 # Aliases
 setopt completealiases
@@ -55,8 +64,3 @@ alias gl='git ls-files'
 alias gls='git ls-files'
 alias gf='git-flow'
 
-
-# Zplugin
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin

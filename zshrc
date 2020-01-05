@@ -3,10 +3,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 zstyle :compinstall filename '~/.zshrc'
-
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
 autoload -U colors
 plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)

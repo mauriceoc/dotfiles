@@ -19,6 +19,7 @@ brew bundle
 ln -shf ${DOT_FILES}/zprofile ${HOME}/.zprofile
 ln -shf ${DOT_FILES}/zshrc ${HOME}/.zshrc
 ln -shf ${DOT_FILES}/zshenv ${HOME}/.zshenv
+ln -shf ${DOT_FILES}/alias ${HOME}/.alias
 
 # other config
 ln -shf ${DOT_FILES}/pgclirc ${HOME}/.pgclirc

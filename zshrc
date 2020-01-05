@@ -56,5 +56,5 @@ alias gls='git ls-files'
 alias gf='git-flow'
 
 # Environment Variables
-export EDITOR=nano
-export BROWSER=firefox
+export EDITOR=vim
+export BROWSER=safari

@@ -55,6 +55,3 @@ alias gl='git ls-files'
 alias gls='git ls-files'
 alias gf='git-flow'
 
-# Environment Variables
-export EDITOR=vim
-export BROWSER=safari

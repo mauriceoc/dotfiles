@@ -57,42 +57,4 @@ RPROMPT='${vim_mode} ${vcs_info_msg_0_}'
 # === ALIASES ===
 setopt completealiases
 
-# ls
-alias l='{ clear && ls -oh; }'
-alias ll='l'
-alias t='tree -C'
-alias sl='ls'
-alias la='ls -a'
-
-alias port='lsof -i'
-
-alias lck='pmset displaysleepnow'
-
-# misc
-alias vim='nvim'
-alias v='nvim'
-alias h='history'
-alias chromex='chrome --args --disable-web-security --user-data-dir'
-alias tm='tmux'
-
-alias screen-locker='watch -n 5 screen-lock'
-
-# pushd / popd
-alias p='pushd'
-alias o='popd'
-
-# cd
-alias ..='cd ..'
-alias ...='cd ../...'
-alias cdd='cd ~/dotfiles'
-alias cdc='cd ~/code'
-alias cdgo='cd $GOPATH'
-
-# git
-alias g='git'
-alias gs='git status --short'
-alias gg='git grep'
-alias gl='git ls-files'
-alias gls='git ls-files'
-alias gf='git-flow'
-
+source ~/.alias

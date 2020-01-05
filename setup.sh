@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "=== SETUP ==="
+echo "=== SETUP 2 ==="
 
 set -e
 set -x
@@ -9,18 +9,22 @@ DOT_FILES="${HOME}/dotfiles"
 BASHRC="${HOME}/.bashrc"
 NVIM_CONFIG=${HOME}/.config/nvim
 
-[ ! -f ${BASHRC} ] && cp ${DOT_FILES}/bash-init ${HOME}/.bashrc
+# install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew bundle 
 
-ln -shf ${DOT_FILES}/bash_profile ${HOME}/.bash_profile
+# zsh
+ln -shf ${DOT_FILES}/zprofile ${HOME}/.zprofile
+ln -shf ${DOT_FILES}/zshrc ${HOME}/.zshrc
+ln -shf ${DOT_FILES}/zshenv ${HOME}/.zshenv
+
+# other config
 ln -shf ${DOT_FILES}/pgclirc ${HOME}/.pgclirc
 ln -shf ${DOT_FILES}/gitconfig ${HOME}/.gitconfig
 ln -shf ${DOT_FILES}/tmux.conf ${HOME}/.tmux.conf
+ln -shf ${DOT_FILES}/init.vim ${NVIM_CONFIG}/init.vim
 
-#dirs
+# dirs
 ln -shf ${DOT_FILES}/tmux ${HOME}/.tmux
 ln -shf ${DOT_FILES}/vim  ${HOME}/.vim
-
-mkdir -p ${NVIM_CONFIG}
-
-ln -shf ${DOT_FILES}/init.vim ${NVIM_CONFIG}/init.vim
 

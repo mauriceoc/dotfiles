@@ -18,6 +18,11 @@ plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)
 export CLICOLOR=1
 export LS_COLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
+
+# === COMPLETION
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}  
+zstyle ':completion:*' menu select
+
 # === PROMPT ===
 parse_git_branch() {
         git symbolic-ref --short HEAD 2> /dev/null

@@ -1,3 +1,4 @@
+# AUTOLOAD CALLS
 autoload -U colors select-word-style
 colors          # colors
 select-word-style bash # ctrl+w on words
@@ -5,9 +6,11 @@ select-word-style bash # ctrl+w on words
 autoload -Uz compinit vcs_info
 compinit
 
+# HISTORY FILE
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
 bindkey -e
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
@@ -18,7 +21,7 @@ plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)
 
 # === ENVIRONMENT VARIABLES ===
 #
-# interactive shell only!
+# for interactive shell only!
 export CLICOLOR=1
 export LS_COLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
@@ -34,9 +37,7 @@ precmd() {  # run before each prompt
     vcs_info
 }
 
-##
-# Prompt
-##
+# === PROMPT === 
 setopt PROMPT_SUBST     # allow funky stuff in prompt
 color="blue"
 if [ "$USER" = "root" ]; then

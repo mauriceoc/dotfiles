@@ -10,11 +10,11 @@ BASHRC="${HOME}/.bashrc"
 NVIM_CONFIG=${HOME}/.config/nvim
 
 # install homebrew
-if [ ! -f '/usr/local/bin/brew' ]; then
+if [ -x "$(command -v brew)" ]; then
+        echo "homebrew - already exists"
+else 
         echo "homebrew - installing it now"
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-        echo "homebrew - already exists"
 fi
 
 # execute Brewfile

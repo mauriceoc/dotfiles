@@ -1,7 +1,9 @@
 autoload -U colors select-word-style
 colors          # colors
-#zsh-mime-setup  # run everything as if it's an executable
 select-word-style bash # ctrl+w on words
+
+autoload -Uz compinit vcs_info
+compinit
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -20,16 +22,11 @@ plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)
 export CLICOLOR=1
 export LS_COLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
-
-# === COMPLETION
+# === COMPLETION ===
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}  
 zstyle ':completion:*' menu select
 
-
-##
-# Vcs info
-##
-autoload -Uz vcs_info
+# === VCS INFO ===
 zstyle ':vcs_info:*' enable git svn hg
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' formats "%{$fg[yellow]%}%c%{$fg[green]%}%u%{$reset_color%} [%{$fg[blue]%}%b%{$reset_color%}] %{$fg[yellow]%}%s%{$reset_color%}:%r"

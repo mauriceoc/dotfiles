@@ -2,6 +2,7 @@
 alias l='{ clear && ls -oh; }'
 alias ll='l'
 alias t='tree -C'
+alias ls='ls -G'
 alias sl='ls'
 alias la='ls -a'
 

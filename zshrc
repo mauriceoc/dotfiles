@@ -4,6 +4,7 @@
 export CLICOLOR=1
 #export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export LSCOLORS='GxFxCxDxBxegedabagaced'
+
 # === AUTOLOAD CALLS
 autoload -U colors select-word-style
 colors          # colors

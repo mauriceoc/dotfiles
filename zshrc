@@ -49,7 +49,7 @@ color="blue"
 if [ "$USER" = "root" ]; then
     color="red"         # root is red, user is blue
 fi;
-prompt="%{$fg[$color]%}%n%{$reset_color%}@%U%{$fg[yellow]%}%m%{$reset_color%}%u %T %B%~%b "
+prompt="%{$fg[$color]%}%n%{$reset_color%}@%U%{$fg[blue]%}%m%{$reset_color%}%u %T %B%~%b "
 RPROMPT='${vim_mode} ${vcs_info_msg_0_}'
 
 # === ALIASES

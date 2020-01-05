@@ -18,6 +18,7 @@ ln -shf ${DOT_FILES}/zshenv ${HOME}/.zshenv
 ln -shf ${DOT_FILES}/pgclirc ${HOME}/.pgclirc
 ln -shf ${DOT_FILES}/gitconfig ${HOME}/.gitconfig
 ln -shf ${DOT_FILES}/tmux.conf ${HOME}/.tmux.conf
+ln -shf ${DOT_FILES}/init.vim ${NVIM_CONFIG}/init.vim
 
 # dirs
 ln -shf ${DOT_FILES}/tmux ${HOME}/.tmux

@@ -1,3 +1,7 @@
+autoload -U colors select-word-style
+colors          # colors
+#zsh-mime-setup  # run everything as if it's an executable
+select-word-style bash # ctrl+w on words
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -6,8 +10,6 @@ bindkey -e
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
-
-autoload -U colors
 
 # === PLUGINS
 plugins=(git brew osx aws cp docker node npm nvm rust tmux yarn)
@@ -23,13 +25,28 @@ export LS_COLORS="ExGxBxDxCxEgEdxbxgxcxd"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}  
 zstyle ':completion:*' menu select
 
-# === PROMPT ===
-parse_git_branch() {
-        git symbolic-ref --short HEAD 2> /dev/null
+
+##
+# Vcs info
+##
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn hg
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' formats "%{$fg[yellow]%}%c%{$fg[green]%}%u%{$reset_color%} [%{$fg[blue]%}%b%{$reset_color%}] %{$fg[yellow]%}%s%{$reset_color%}:%r"
+precmd() {  # run before each prompt
+    vcs_info
 }
 
-setopt PROMPT_SUBST
-PROMPT='%9c%{%F{blue}%} $(parse_git_branch)%{%F{none}%} $ '
+##
+# Prompt
+##
+setopt PROMPT_SUBST     # allow funky stuff in prompt
+color="blue"
+if [ "$USER" = "root" ]; then
+    color="red"         # root is red, user is blue
+fi;
+prompt="%{$fg[$color]%}%n%{$reset_color%}@%U%{$fg[yellow]%}%m%{$reset_color%}%u %T %B%~%b "
+RPROMPT='${vim_mode} ${vcs_info_msg_0_}'
 
 # === ALIASES ===
 setopt completealiases

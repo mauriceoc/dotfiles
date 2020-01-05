@@ -11,6 +11,8 @@ NVIM_CONFIG=${HOME}/.config/nvim
 
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# execute Brewfile
 brew bundle 
 
 # zsh

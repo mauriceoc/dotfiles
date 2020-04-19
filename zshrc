@@ -39,7 +39,7 @@ zstyle ':completion:*' menu select
 # === VCS INFO
 zstyle ':vcs_info:*' enable git svn hg
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats "%{$fg[yellow]%}%c%{$fg[green]%}%u%{$reset_color%} [%{$fg[blue]%}%b%{$reset_color%}] %{$fg[yellow]%}%s%{$reset_color%}:%r"
+zstyle ':vcs_info:*' formats "%{$fg[green]%}%c%{$fg[green]%}%u%{$reset_color%} [%{$fg[blue]%}%b%{$reset_color%}] %{$fg[green]%}%s%{$reset_color%}:%r"
 precmd() {  # run before each prompt
     vcs_info
 }
@@ -51,7 +51,7 @@ if [ "$USER" = "root" ]; then
     color="red"         # root is red, user is blue
 fi;
 #PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
-PROMPT="%{$fg[$color]%}%n%{$reset_color%} %{$fg[magenta]%}%1~ "
+PROMPT="%{$fg[green]%}%n%{$reset_color%} %{$fg[blue]%}%1~%{$reset_color%} "
 RPROMPT='${vim_mode} ${vcs_info_msg_0_}'
 
 # === ALIASES

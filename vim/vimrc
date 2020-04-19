@@ -75,7 +75,7 @@ set hlsearch            " highlight matches
 set smartcase           " when searching try to be smart about cases 
 
 set backup		
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupdir^=~/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup

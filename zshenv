@@ -7,4 +7,7 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
 fi
 
 # Home-made scripts
-export PATH=$PATH:${HOME}/.bin
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+
+export PATH=$PATH:${HOME}/.bin:$GOBIN

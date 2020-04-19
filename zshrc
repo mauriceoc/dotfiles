@@ -39,7 +39,7 @@ zstyle ':completion:*' menu select
 # === VCS INFO
 zstyle ':vcs_info:*' enable git svn hg
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats "%{$fg[magenta]%}%c%{$fg[magenta]%}%u%{$reset_color%} [%{$fg[blue]%}%b%{$reset_color%}] %{$fg[magenta]%}%s%{$reset_color%}:%r"
+zstyle ':vcs_info:*' formats "%{$fg[magenta]%}%c%{$fg[magenta]%}%u%{$reset_color%} [%{$fg[blue]%}%b%{$reset_color%}] %{$fg[red]%}%s%{$reset_color%}:%r"
 precmd() {  # run before each prompt
     vcs_info
 }

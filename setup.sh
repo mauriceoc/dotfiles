@@ -37,4 +37,5 @@ ln -shf ${DOT_FILES}/init.vim ${NVIM_CONFIG}/init.vim
 # dirs
 ln -shf ${DOT_FILES}/tmux ${HOME}/.tmux
 ln -shf ${DOT_FILES}/vim  ${HOME}/.vim
+ln -shf ${DOT_FILES}/grc  ${HOME}/.grc
 

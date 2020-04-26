@@ -10,4 +10,5 @@ brew "multitail"
 brew "golang"
 brew "grc"
 brew "awscli"
+brew "yarn"
 

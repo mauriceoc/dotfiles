@@ -9,4 +9,5 @@ brew "nvim"
 brew "multitail"
 brew "golang"
 brew "grc"
+brew "awscli"
 

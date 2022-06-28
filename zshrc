@@ -58,3 +58,4 @@ RPROMPT='${vim_mode} ${vcs_info_msg_0_}'
 setopt completealiases
 
 source ~/.alias
+source ~/.alias-local

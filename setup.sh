@@ -2,7 +2,7 @@
 
 echo "=== SETUP 2 ==="
 
-mkdir -p "${HOME}/.config"
+mkdir -p "${HOME}/.config/nvim"
 
 set -e
 set -x

@@ -14,13 +14,13 @@ NVIM_CONFIG=${HOME}/.config/nvim
 # install homebrew
 if [ -x "$(command -v brew)" ]; then
         echo "homebrew - already exists"
-else 
+else
         echo "homebrew - installing it now"
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # execute Brewfile
-brew bundle 
+brew bundle
 
 # zsh
 ln -shf "${DOT_FILES}/zprofile" "${HOME}/.zprofile"
@@ -40,4 +40,4 @@ ln -shf "${DOT_FILES}/grc"  "${HOME}/.grc"
 ln -shf "${DOT_FILES}/config/fish" "${HOME}/.config/fish"
 
 touch "${HOME}/.alias-local"
-
+touch "${HOME}/.env-local"

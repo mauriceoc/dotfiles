@@ -1,4 +1,6 @@
 export VOLTA_HOME="$HOME/.volta"
+
+# add volta, jenv
 export PATH="$HOME/.jenv/bin:$VOLTA_HOME/bin:$PATH"
 
 eval "$(jenv init -)"

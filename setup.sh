@@ -2,6 +2,8 @@
 
 echo "=== SETUP 2 ==="
 
+mkdir -p "${HOME}/.config"
+
 set -e
 set -x
 

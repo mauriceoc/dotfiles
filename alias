@@ -37,4 +37,4 @@ alias gg='git grep'
 alias gl='git ls-files'
 alias gls='git ls-files'
 alias gf='git-flow'
-
+alias gg='git grep'

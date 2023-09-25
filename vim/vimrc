@@ -51,7 +51,7 @@ set secure
 set so=7                " start vertical scroll from 7 lines
 
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 "set autochdir 		    " change directory to the current buffer when opening files.
 "set cursorline		    " display a line under the cursor 

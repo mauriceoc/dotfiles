@@ -1,4 +1,4 @@
 if status is-interactive
-    source ~/dotfiles/alias
-	source ~/.alias-local
+    source "${HOME}/dotfiles/alias"
+    source "${HOME}/.alias-local"
 end

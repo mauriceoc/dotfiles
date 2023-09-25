@@ -65,7 +65,7 @@ set statusline+=%=      " Switch to the right side
 set statusline+=%l      " Current line
 set statusline+=/       " Separator
 set statusline+=%L      " Total lines
-set statusline+=%{fugitive#statusline()} " add git branch to status line via vim-fugitive
+" set statusline+=%{fugitive#statusline()} " add git branch to status line via vim-fugitive
 
 set showmatch           " highlight matching brackets
 set mat=2               " how many tenths of a second to blink when matching brackets

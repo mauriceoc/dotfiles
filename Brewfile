@@ -1,5 +1,6 @@
 #Brewfile
 
+brew "jenv"
 brew "pgcli"
 brew "ag"
 brew "vim"

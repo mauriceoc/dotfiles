@@ -1,5 +1,6 @@
 #Brewfile
 
+brew "volta"
 brew "jenv"
 brew "pgcli"
 brew "ag"

@@ -5,3 +5,4 @@ if status is-interactive
     source "$HOME/.env-local"
     source "$HOME/.alias-local"
 end
+

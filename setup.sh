@@ -21,21 +21,21 @@ fi
 brew bundle 
 
 # zsh
-ln -shf ${DOT_FILES}/zprofile ${HOME}/.zprofile
-ln -shf ${DOT_FILES}/zshrc ${HOME}/.zshrc
-ln -shf ${DOT_FILES}/zshenv ${HOME}/.zshenv
+ln -shf "${DOT_FILES}/zprofile" "${HOME}/.zprofile"
+ln -shf "${DOT_FILES}/zshrc" "${HOME}/.zshrc"
+ln -shf "${DOT_FILES}/zshenv" "${HOME}/.zshenv"
 
 # aliases
-ln -shf ${DOT_FILES}/alias ${HOME}/.alias
+ln -shf "${DOT_FILES}/alias" "${HOME}/.alias"
 
 # other config
-ln -shf ${DOT_FILES}/pgclirc ${HOME}/.pgclirc
-ln -shf ${DOT_FILES}/gitconfig ${HOME}/.gitconfig
-ln -shf ${DOT_FILES}/tmux.conf ${HOME}/.tmux.conf
-ln -shf ${DOT_FILES}/init.vim ${NVIM_CONFIG}/init.vim
+ln -shf "${DOT_FILES}/pgclirc" "${HOME}/.pgclirc"
+ln -shf "${DOT_FILES}/gitconfig" "${HOME}/.gitconfig"
+ln -shf "${DOT_FILES}/tmux.conf" "${HOME}/.tmux.conf"
+ln -shf "${DOT_FILES}/init.vim" "${NVIM_CONFIG}/init.vim"
 
 # dirs
-ln -shf ${DOT_FILES}/tmux ${HOME}/.tmux
-ln -shf ${DOT_FILES}/vim  ${HOME}/.vim
-ln -shf ${DOT_FILES}/grc  ${HOME}/.grc
-
+ln -shf "${DOT_FILES}/tmux" "${HOME}/.tmux"
+ln -shf "${DOT_FILES}/vim"  "${HOME}/.vim"
+ln -shf "${DOT_FILES}/grc"  "${HOME}/.grc"
+ln -shf "${DOT_FILES}/config/fish" "${HOME}/.config/fish"

@@ -1,5 +1,6 @@
 #Brewfile
 
+brew "fzf"
 brew "volta"
 brew "jenv"
 brew "pgcli"

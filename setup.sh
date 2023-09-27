@@ -40,4 +40,4 @@ ln -shf "${DOT_FILES}/grc"  "${HOME}/.grc"
 ln -shf "${DOT_FILES}/config/fish" "${HOME}/.config/fish"
 
 touch "${HOME}/.alias-local"
-
+touch "${HOME}/.env-local"

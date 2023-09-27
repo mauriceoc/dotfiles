@@ -2,14 +2,14 @@
 
 echo "=== SETUP 2 ==="
 
-mkdir -p "${HOME}/.config/nvim"
+NVIM_CONFIG="${HOME}/.config/nvim"
+mkdir -p "${NVIM_CONFIG}"
 
 set -e
 set -x
 
 DOT_FILES="${HOME}/dotfiles"
 BASHRC="${HOME}/.bashrc"
-NVIM_CONFIG=${HOME}/.config/nvim
 
 # install homebrew
 if [ -x "$(command -v brew)" ]; then
@@ -31,7 +31,7 @@ ln -shf "${DOT_FILES}/zshenv" "${HOME}/.zshenv"
 ln -shf "${DOT_FILES}/pgclirc" "${HOME}/.pgclirc"
 ln -shf "${DOT_FILES}/gitconfig" "${HOME}/.gitconfig"
 ln -shf "${DOT_FILES}/tmux.conf" "${HOME}/.tmux.conf"
-ln -shf "${DOT_FILES}/init.vim" "${NVIM_CONFIG}/init.vim"
+ln -shf "${DOT_FILES}/config/init.vim" "${NVIM_CONFIG}/init.vim"
 
 # dirs
 ln -shf "${DOT_FILES}/tmux" "${HOME}/.tmux"
